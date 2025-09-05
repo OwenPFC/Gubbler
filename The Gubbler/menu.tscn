@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddm2jjokc5ry5"]
+
+[ext_resource type="Texture2D" uid="uid://dihexnve0eujh" path="res://menu.png" id="1_7nrmh"]
+[ext_resource type="Script" path="res://menu.gd" id="1_lt5og"]
+[ext_resource type="Texture2D" uid="uid://cenicfb1c7sdn" path="res://gubbler credits.png" id="3_emwpe"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_lt5og")
+
+[node name="menu_screen" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+texture = ExtResource("1_7nrmh")
+
+[node name="start" type="Button" parent="."]
+offset_left = 117.0
+offset_top = 299.0
+offset_right = 249.0
+offset_bottom = 323.0
+flat = true
+
+[node name="credit_button" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 451.0
+offset_right = 593.0
+offset_bottom = 604.0
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 248.0
+offset_top = 115.0
+offset_right = 891.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "THE GUBBLER IN THE BAUBLED BUBBLER"
+
+[node name="credits" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(607, 331)
+scale = Vector2(1.2625, 1.25556)
+texture = ExtResource("3_emwpe")
+
+[node name="credit_exit" type="Button" parent="."]
+visible = false
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 146.0
+offset_bottom = 89.0
+text = "Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="credit_button" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="credit_button" to="credit_button" method="_on_pressed"]
+[connection signal="pressed" from="credit_exit" to="." method="_on_credit_exit_pressed"]

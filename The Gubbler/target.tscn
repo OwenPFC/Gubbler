@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr76damip8qve"]
+
+[ext_resource type="Script" path="res://target.gd" id="1_b8uta"]
+[ext_resource type="Texture2D" uid="uid://b6rymxc0w16o7" path="res://guy.png" id="2_anmxg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2j1sg"]
+radius = 0.00872803
+height = 142.03
+
+[node name="target" type="Node2D"]
+script = ExtResource("1_b8uta")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(449, 185)
+texture = ExtResource("2_anmxg")
+
+[node name="mouth" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouth"]
+position = Vector2(445, 165)
+rotation = -1.57952
+shape = SubResource("CapsuleShape2D_2j1sg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="area_entered" from="mouth" to="." method="_on_mouth_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,172 @@
+[gd_scene load_steps=7 format=3 uid="uid://mcrx7xwdttsj"]
+
+[ext_resource type="Script" path="res://crank and pipes.gd" id="1_7a0cj"]
+[ext_resource type="Texture2D" uid="uid://de6b2upp2qnyq" path="res://gubbler arms/1.png" id="2_eyoia"]
+[ext_resource type="Texture2D" uid="uid://dpw0qfep1j5ef" path="res://Crank Lever.png" id="2_y7leo"]
+[ext_resource type="Texture2D" uid="uid://cplpyhhfaiqsi" path="res://gubbler no arms real/1.png" id="4_qs7wu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujc8f"]
+radius = 124.487
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq2on"]
+
+[node name="crank" type="Node2D"]
+position = Vector2(-2, 1)
+script = ExtResource("1_7a0cj")
+
+[node name="lever" type="Sprite2D" parent="."]
+position = Vector2(2.00001, -3.99998)
+scale = Vector2(1, 1.61342)
+texture = ExtResource("2_y7leo")
+
+[node name="lever_indicator" type="Sprite2D" parent="lever"]
+position = Vector2(-6.91414e-06, -39.0475)
+rotation = 3.14159
+scale = Vector2(0.000817661, 0.000474184)
+texture = ExtResource("2_y7leo")
+
+[node name="area" type="Area2D" parent="."]
+position = Vector2(-0.999969, -9.99994)
+scale = Vector2(1, 1.61342)
+
+[node name="circle hitbox" type="CollisionShape2D" parent="area"]
+visible = false
+position = Vector2(-1, 1.23961)
+scale = Vector2(1, 0.619801)
+shape = SubResource("CircleShape2D_ujc8f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = -5.0
+
+[node name="arms" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-9, -67)
+scale = Vector2(0.430833, 0.483333)
+texture = ExtResource("2_eyoia")
+offset = Vector2(-38.2688, 4.34782)
+
+[node name="arms_indicator" type="Sprite2D" parent="arms"]
+position = Vector2(-81.2379, -12.4138)
+offset = Vector2(-125.339, 82.7586)
+
+[node name="gubbler_area" type="Area2D" parent="arms/arms_indicator"]
+scale = Vector2(0.823162, 0.941294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arms/arms_indicator/gubbler_area"]
+shape = SubResource("RectangleShape2D_bq2on")
+
+[node name="gubbler_body" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-44, -73)
+scale = Vector2(0.354645, 0.454959)
+texture = ExtResource("4_qs7wu")
+offset = Vector2(-192.092, 538.51)
+
+[node name="anim_1" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_1"]
+build_mode = 1
+polygon = PackedVector2Array(-64, -88, -32, -86, -31, -49, -72, -49)
+
+[node name="anim_2" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_2"]
+build_mode = 1
+polygon = PackedVector2Array(-24, -87, -21, -50, -6, -50, -5, -86)
+
+[node name="anim_3" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_3"]
+position = Vector2(-27, 8)
+build_mode = 1
+polygon = PackedVector2Array(27, -87, 43, -86, 47, -57, 30, -53)
+
+[node name="anim_4" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_4"]
+position = Vector2(-26, 4)
+build_mode = 1
+polygon = PackedVector2Array(25, -46, 65, -46, 52, -29, 28, -26)
+
+[node name="anim_5" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_5"]
+position = Vector2(-32, -9)
+build_mode = 1
+polygon = PackedVector2Array(29, -9, 63, -10, 56, 7, 33, 6)
+
+[node name="anim_6" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_6"]
+position = Vector2(4, 2)
+build_mode = 1
+polygon = PackedVector2Array(-9, 0, 22, 2, 13, 12, -7, 10)
+
+[node name="anim_7" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_7"]
+position = Vector2(16, 20)
+build_mode = 1
+polygon = PackedVector2Array(-44, 0, -24, -1, -15, 4, -18, 11, -35, 12, -45, 11)
+
+[node name="anim_8" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_8"]
+position = Vector2(9, 35)
+build_mode = 1
+polygon = PackedVector2Array(-64, -8, -56, -9, -44, -8, -52, -1, -62, 1, -69, -2, -69, -9)
+
+[node name="anim_9" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_9"]
+position = Vector2(12, 24)
+build_mode = 1
+polygon = PackedVector2Array(-93, 0, -79, -1, -81, 8, -95, 16, -101, 7, -92, -1)
+
+[node name="anim_10" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_10"]
+position = Vector2(3, 12)
+polygon = PackedVector2Array(-114, 5, -98, 2, -85, 2, -86, 5, -100, 11, -111, 14, -116, 11, -116, 6)
+
+[node name="anim_11" type="Area2D" parent="."]
+position = Vector2(1, 12)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_11"]
+polygon = PackedVector2Array(-120, -11, -99, -11, -85, -11, -87, -6, -107, -4, -121, -4)
+
+[node name="anim_12" type="Area2D" parent="."]
+position = Vector2(3, 8)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_12"]
+polygon = PackedVector2Array(-120, -32, -103, -33, -89, -31, -87, -25, -101, -20, -121, -23)
+
+[node name="anim_13" type="Area2D" parent="."]
+position = Vector2(10, 9)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_13"]
+polygon = PackedVector2Array(-117, -49, -100, -50, -92, -47, -92, -42, -99, -40, -116, -40, -124, -43, -118, -51)
+
+[node name="anim_14" type="Area2D" parent="."]
+position = Vector2(6, 13)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="anim_14"]
+polygon = PackedVector2Array(-109, -66, -92, -68, -83, -65, -84, -60, -113, -61)
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]
+[connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="area" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="area_entered" from="anim_1" to="." method="_on_anim_1_area_entered"]
+[connection signal="area_entered" from="anim_2" to="." method="_on_anim_2_area_entered"]
+[connection signal="area_entered" from="anim_3" to="." method="_on_anim_3_area_entered"]
+[connection signal="area_entered" from="anim_4" to="." method="_on_anim_4_area_entered"]
+[connection signal="area_entered" from="anim_5" to="." method="_on_anim_5_area_entered"]
+[connection signal="area_entered" from="anim_6" to="." method="_on_anim_6_area_entered"]
+[connection signal="area_entered" from="anim_7" to="." method="_on_anim_7_area_entered"]
+[connection signal="area_entered" from="anim_8" to="." method="_on_anim_8_area_entered"]
+[connection signal="area_entered" from="anim_9" to="." method="_on_anim_9_area_entered"]
+[connection signal="area_entered" from="anim_10" to="." method="_on_anim_10_area_entered"]
+[connection signal="area_entered" from="anim_11" to="." method="_on_anim_11_area_entered"]
+[connection signal="area_entered" from="anim_12" to="." method="_on_anim_12_area_entered"]
+[connection signal="area_entered" from="anim_13" to="." method="_on_anim_13_area_entered"]
+[connection signal="area_entered" from="anim_14" to="." method="_on_anim_14_area_entered"]

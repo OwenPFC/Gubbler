@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6p43dq5w2xnk"]
+
+[ext_resource type="Texture2D" uid="uid://mfjag6fr702r" path="res://Water.png" id="1_okbhu"]
+[ext_resource type="Script" path="res://water.gd" id="1_sujl3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iixq"]
+size = Vector2(81.5958, 212.776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0rjb"]
+size = Vector2(653, 20)
+
+[node name="Water" type="Node2D"]
+script = ExtResource("1_sujl3")
+
+[node name="water" type="Area2D" parent="."]
+visible = false
+position = Vector2(-1.00003, 0)
+rotation = 0.683599
+scale = Vector2(0.379, 0.4)
+monitoring = false
+monitorable = false
+
+[node name="water_sprite" type="Sprite2D" parent="water"]
+position = Vector2(40.7919, 108.501)
+scale = Vector2(0.0340726, 0.0614418)
+texture = ExtResource("1_okbhu")
+offset = Vector2(-1204.54, -1730.18)
+
+[node name="water_hitbox" type="CollisionShape2D" parent="water"]
+visible = false
+position = Vector2(0.0480957, -0.388203)
+shape = SubResource("RectangleShape2D_5iixq")
+
+[node name="end_of_water" type="Sprite2D" parent="water"]
+visible = false
+position = Vector2(-2.18584, -107.156)
+scale = Vector2(0.00549655, 0.00696965)
+texture = ExtResource("1_okbhu")
+centered = false
+offset = Vector2(-1108.07, 189.617)
+flip_h = true
+
+[node name="water_ceiling" type="Area2D" parent="."]
+visible = false
+position = Vector2(125, 286)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="water_ceiling"]
+position = Vector2(6, -3)
+shape = SubResource("RectangleShape2D_q0rjb")
+
+[node name="water_arc" type="Node2D" parent="."]
+visible = false
+position = Vector2(31, -36)
+
+[node name="1" type="Area2D" parent="water_arc"]
+
+[node name="polygon_1S" type="Polygon2D" parent="water_arc/1"]
+position = Vector2(-1, 1)
+offset = Vector2(-475, -510)
+texture = ExtResource("1_okbhu")
+polygon = PackedVector2Array(465, 500, 475, 491, 485, 487, 496, 513, 489, 521)
+
+[node name="polygon_1" type="CollisionPolygon2D" parent="water_arc/1"]
+position = Vector2(-476, -509)
+polygon = PackedVector2Array(465, 500, 475, 491, 485, 487, 496, 513, 489, 521)
+
+[node name="2" type="Area2D" parent="water_arc"]
+position = Vector2(14, -9)
+
+[node name="polygon_2S" type="Polygon2D" parent="water_arc/2"]
+position = Vector2(-329, -580)
+texture = ExtResource("1_okbhu")
+polygon = PackedVector2Array(324, 567, 340, 563, 359, 564, 360, 564, 351, 587, 342, 588, 335, 593)
+
+[node name="polygon_2" type="CollisionPolygon2D" parent="water_arc/2"]
+position = Vector2(-490, -500)
+polygon = PackedVector2Array(485, 487, 501, 483, 521, 484, 512, 507, 503, 508, 496, 513)
+
+[node name="3" type="Area2D" parent="water_arc"]
+position = Vector2(40, -13)
+
+[node name="polygon_3S" type="Polygon2D" parent="water_arc/3"]
+position = Vector2(-517, -496)
+texture = ExtResource("1_okbhu")
+polygon = PackedVector2Array(521, 484, 533, 486, 543, 490, 524, 509, 512, 507)
+
+[node name="polygon_3" type="CollisionPolygon2D" parent="water_arc/3"]
+position = Vector2(-517, -496)
+polygon = PackedVector2Array(512, 507, 521, 484, 533, 486, 543, 490, 524, 509)
+
+[node name="4" type="Area2D" parent="water_arc"]
+position = Vector2(55, -9)
+
+[node name="polygon_4S" type="Polygon2D" parent="water_arc/4"]
+position = Vector2(-532, -500)
+texture = ExtResource("1_okbhu")
+polygon = PackedVector2Array(543, 490, 552, 497, 560, 506, 544, 520, 532, 513, 524, 509)
+
+[node name="polygon_4" type="CollisionPolygon2D" parent="water_arc/4"]
+position = Vector2(-532, -500)
+polygon = PackedVector2Array(543, 490, 552, 497, 560, 506, 551, 513, 544, 520, 532, 513, 524, 509)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="area_entered" from="water_ceiling" to="." method="_on_water_ceiling_area_entered"]
+[connection signal="body_entered" from="water_ceiling" to="." method="_on_water_ceiling_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

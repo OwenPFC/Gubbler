@@ -1,0 +1,133 @@
+[gd_scene load_steps=20 format=3 uid="uid://bh0ltt4gr7d27"]
+
+[ext_resource type="PackedScene" uid="uid://cqpish0s6pv4p" path="res://pipes.tscn" id="1_akr2p"]
+[ext_resource type="Script" path="res://level.gd" id="1_ur0vo"]
+[ext_resource type="PackedScene" uid="uid://mcrx7xwdttsj" path="res://crank.tscn" id="2_ydflr"]
+[ext_resource type="PackedScene" uid="uid://ca5swtp0jiu71" path="res://circle.tscn" id="3_qy8m3"]
+[ext_resource type="PackedScene" uid="uid://b6p43dq5w2xnk" path="res://water.tscn" id="4_vlry7"]
+[ext_resource type="PackedScene" uid="uid://c1fxnpgiqm0as" path="res://polygons.tscn" id="5_dj0my"]
+[ext_resource type="Texture2D" uid="uid://dwmmhxbs0jmyr" path="res://gubbler room.png" id="6_nsui6"]
+[ext_resource type="Texture2D" uid="uid://ca8jjq0p4fan7" path="res://bubbler.png" id="7_376re"]
+[ext_resource type="PackedScene" uid="uid://cr76damip8qve" path="res://target.tscn" id="7_pw6ai"]
+[ext_resource type="Texture2D" uid="uid://5rin70ceitpj" path="res://background.png" id="10_8qnrt"]
+[ext_resource type="Texture2D" uid="uid://wau6807f077e" path="res://funny images/800px-Lyndon_B._Johnson_-_15-13-2_-_ca._1915.png" id="11_lkkdc"]
+[ext_resource type="Texture2D" uid="uid://dwrtdtwruhlb2" path="res://funny images/Mike_Gravel_1977.jpg" id="12_moeeu"]
+[ext_resource type="Texture2D" uid="uid://cj0uuun7h1lgx" path="res://funny images/Mike_Gravel_BumperSticker.png" id="13_y53k4"]
+[ext_resource type="Texture2D" uid="uid://b0tlm42bgxk2s" path="res://funny images/Roosevelt_and_the_Canal 2.jpg" id="14_fk7gw"]
+[ext_resource type="Texture2D" uid="uid://c74n146j3ffee" path="res://funny images/George_W._Bush_in_1964_Pot_Pourri.jpg" id="15_puxsv"]
+[ext_resource type="Texture2D" uid="uid://cjo5rty3fuvx" path="res://funny images/Richard_Nixon_signs_Clean_Air_Act_of_1970_12-31-1970.jpg" id="16_rqnj7"]
+[ext_resource type="Texture2D" uid="uid://qoom2yxcpk6g" path="res://funny images/service-pnp-cph-3c20000-3c24000-3c24900-3c24945v.png" id="17_qyhf4"]
+[ext_resource type="Texture2D" uid="uid://bxft40fpgwgs5" path="res://funny images/SGMVining.jpg" id="18_srsd4"]
+[ext_resource type="Texture2D" uid="uid://ck3fkmbvndutr" path="res://funny images/Frank_Kameny_June_2010_Pride_1.jpg" id="19_0lfh7"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_ur0vo")
+
+[node name="polygons" parent="." instance=ExtResource("5_dj0my")]
+position = Vector2(136, 243)
+
+[node name="target" parent="." instance=ExtResource("7_pw6ai")]
+position = Vector2(216, 104)
+
+[node name="Water" parent="." instance=ExtResource("4_vlry7")]
+position = Vector2(111, 325)
+
+[node name="bubbler" type="Sprite2D" parent="."]
+position = Vector2(481, 398)
+scale = Vector2(2.00441, 1.16879)
+texture = ExtResource("7_376re")
+
+[node name="gubbler room" type="Sprite2D" parent="."]
+position = Vector2(428.5, 527.5)
+scale = Vector2(1.795, 1.195)
+texture = ExtResource("6_nsui6")
+
+[node name="pictures" type="Node2D" parent="."]
+
+[node name="SgmVining" type="Sprite2D" parent="pictures"]
+position = Vector2(339, 607)
+scale = Vector2(0.0378573, 0.0211929)
+skew = -1.25489
+texture = ExtResource("18_srsd4")
+
+[node name="RichardNixonSignsCleanAirActOf197012-31-1970" type="Sprite2D" parent="pictures"]
+position = Vector2(525, 614)
+scale = Vector2(0.00637731, 0.00643963)
+skew = 0.872665
+texture = ExtResource("16_rqnj7")
+
+[node name="Service-pnp-cph-3c20000-3c24000-3c24900-3c24945v" type="Sprite2D" parent="pictures"]
+position = Vector2(469, 637)
+scale = Vector2(0.045569, 0.027259)
+skew = 1.03847
+texture = ExtResource("17_qyhf4")
+
+[node name="GeorgeW_BushIn1964PotPourri" type="Sprite2D" parent="pictures"]
+position = Vector2(354, 630)
+scale = Vector2(0.0163793, 0.0175926)
+skew = -0.820305
+texture = ExtResource("15_puxsv")
+
+[node name="RooseveltAndTheCanal2" type="Sprite2D" parent="pictures"]
+position = Vector2(568.125, 534.188)
+scale = Vector2(0.200676, 0.335574)
+texture = ExtResource("14_fk7gw")
+
+[node name="MikeGravelBumperSticker" type="Sprite2D" parent="pictures"]
+position = Vector2(587, 414)
+scale = Vector2(0.0614583, 0.0492425)
+texture = ExtResource("13_y53k4")
+
+[node name="MikeGravel1977" type="Sprite2D" parent="pictures"]
+position = Vector2(586, 446)
+scale = Vector2(0.0470414, 0.0657169)
+texture = ExtResource("12_moeeu")
+
+[node name="800Px-lyndonB_Johnson-15-13-2-Ca_1915" type="Sprite2D" parent="pictures"]
+position = Vector2(298.25, 473)
+scale = Vector2(0.0843751, 0.10609)
+texture = ExtResource("11_lkkdc")
+
+[node name="FrankKamenyJune2010Pride1" type="Sprite2D" parent="pictures"]
+position = Vector2(535, 440)
+scale = Vector2(0.0210084, 0.01587)
+texture = ExtResource("19_0lfh7")
+
+[node name="pipes" parent="." instance=ExtResource("1_akr2p")]
+position = Vector2(18, 177)
+
+[node name="crank" parent="." instance=ExtResource("2_ydflr")]
+position = Vector2(476, 547)
+
+[node name="circle" parent="crank" instance=ExtResource("3_qy8m3")]
+position = Vector2(477, 549)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(136, 243)
+volume_db = 2.0
+
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(611, 357)
+scale = Vector2(1.05729, 1.09259)
+texture = ExtResource("10_8qnrt")
+
+[node name="instructions" type="Label" parent="."]
+offset_left = 661.0
+offset_top = 538.0
+offset_right = 1115.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "<- Turn the crank to change the water pressure
+Press space to release the water"
+
+[connection signal="basinHit" from="polygons" to="target" method="_on_polygons_basin_hit"]
+[connection signal="basinHit" from="polygons" to="Water" method="_on_polygons_basin_hit"]
+[connection signal="waterReset2" from="polygons" to="Water" method="_on_polygons_water_reset_2"]
+[connection signal="removeTarget" from="target" to="crank" method="_on_target_remove_target"]
+[connection signal="targetWasHit" from="target" to="polygons" method="_on_target_target_was_hit"]
+[connection signal="targetWasHit" from="target" to="Water" method="_on_target_target_was_hit"]
+[connection signal="sendEndOfWater" from="Water" to="polygons" method="_on_water_send_end_of_water"]
+[connection signal="sendPipeDelta" from="pipes" to="Water" method="_on_pipes_send_pipe_delta"]
+[connection signal="sendRote" from="crank" to="pipes" method="_on_crank_send_rote"]

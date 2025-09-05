@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca5swtp0jiu71"]
+
+[ext_resource type="Texture2D" uid="uid://b2k78sxcfukkb" path="res://Crank Circle.png" id="1_a1lj3"]
+
+[node name="circle" type="Node2D"]
+top_level = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a1lj3")

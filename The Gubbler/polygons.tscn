@@ -1,0 +1,329 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1fxnpgiqm0as"]
+
+[ext_resource type="Texture2D" uid="uid://mfjag6fr702r" path="res://Water.png" id="1_am60l"]
+[ext_resource type="Script" path="res://polygons.gd" id="1_xxpvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2wf4"]
+size = Vector2(15547.3, 11)
+
+[node name="polygons" type="Node2D"]
+script = ExtResource("1_xxpvd")
+
+[node name="water_arc" type="Node2D" parent="."]
+
+[node name="1" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="polygon_1S" type="Polygon2D" parent="water_arc/1"]
+position = Vector2(-1, 1)
+offset = Vector2(-475, -510)
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(465, 500, 475, 491, 485, 487, 496, 513, 489, 521)
+
+[node name="polygon_1" type="CollisionPolygon2D" parent="water_arc/1"]
+visible = false
+position = Vector2(-476, -509)
+polygon = PackedVector2Array(465, 500, 475, 491, 485, 487, 496, 513, 489, 521)
+disabled = true
+
+[node name="2" type="Area2D" parent="water_arc"]
+visible = false
+position = Vector2(14, -9)
+
+[node name="polygon_2S" type="Polygon2D" parent="water_arc/2"]
+position = Vector2(-329, -580)
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(324, 567, 340, 563, 359, 564, 360, 564, 351, 587, 342, 589, 335, 593)
+
+[node name="polygon_2" type="CollisionPolygon2D" parent="water_arc/2"]
+visible = false
+position = Vector2(-490, -500)
+polygon = PackedVector2Array(485, 487, 501, 483, 521, 484, 512, 507, 503, 508, 496, 513)
+disabled = true
+
+[node name="2_5" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/2_5"]
+visible = false
+polygon = PackedVector2Array(45, -25, 56, -24, 67, -23, 73, -22, 75, -18, 75, -12, 72, -7, 67, -2, 62, -1, 49, -2, 43, -2, 37, -2, 35, -2)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/2_5"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(45, -25, 67, -23, 73, -22, 63, -1, 49, -2, 36, -2, 35, -2)
+
+[node name="3" type="Area2D" parent="water_arc"]
+visible = false
+position = Vector2(40, -13)
+
+[node name="polygon_3S" type="Polygon2D" parent="water_arc/3"]
+position = Vector2(-482, -492)
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(515, 483, 531, 487, 532, 494, 523, 507, 505, 504)
+
+[node name="polygon_3" type="CollisionPolygon2D" parent="water_arc/3"]
+visible = false
+position = Vector2(-517, -496)
+polygon = PackedVector2Array(512, 507, 521, 484, 533, 486, 543, 490, 524, 509)
+disabled = true
+
+[node name="4" type="Area2D" parent="water_arc"]
+visible = false
+position = Vector2(108, -30)
+
+[node name="polygon_4S" type="Polygon2D" parent="water_arc/4"]
+position = Vector2(-553, -476)
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(534, 488, 540, 490, 551, 494, 555, 496, 548, 513, 534, 510, 526, 508)
+
+[node name="polygon_4" type="CollisionPolygon2D" parent="water_arc/4"]
+visible = false
+position = Vector2(-532, -500)
+polygon = PackedVector2Array(543, 490, 552, 497, 560, 506, 551, 513, 544, 520, 532, 513, 524, 509)
+disabled = true
+
+[node name="5" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/5"]
+visible = false
+polygon = PackedVector2Array(110, -10, 122, -5, 138, 3, 113, 16, 100, 6)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/5"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(110, -10, 122, -5, 138, 3, 113, 16, 100, 6)
+
+[node name="6" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/6"]
+visible = false
+polygon = PackedVector2Array(138, 3, 171, 21, 167, 59, 113, 16)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/6"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(138, 3, 171, 21, 167, 59, 113, 16)
+
+[node name="7" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/7"]
+visible = false
+polygon = PackedVector2Array(171, 21, 200, 42, 186, 81, 167, 59)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/7"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(171, 21, 200, 42, 186, 81, 167, 59)
+
+[node name="8" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/8"]
+visible = false
+polygon = PackedVector2Array(200, 42, 228, 67, 205, 107, 186, 81)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/8"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(200, 42, 228, 67, 205, 107, 186, 81)
+
+[node name="9" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/9"]
+visible = false
+polygon = PackedVector2Array(228, 67, 247, 97, 216, 125, 205, 108)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/9"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(228, 67, 247, 97, 216, 125, 205, 107)
+
+[node name="10" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/10"]
+visible = false
+polygon = PackedVector2Array(247, 97, 255, 118, 260, 130, 269, 168, 237, 177, 233, 168, 229, 159, 225, 148, 220, 136, 216, 125)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/10"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(247, 97, 255, 118, 260, 130, 269, 168, 237, 177, 229, 159, 223, 143, 220, 136, 216, 125)
+
+[node name="11" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/11"]
+visible = false
+polygon = PackedVector2Array(269, 168, 277, 200, 248, 224, 237, 177)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/11"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(269, 168, 277, 200, 248, 224, 237, 177)
+
+[node name="12" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/12"]
+visible = false
+polygon = PackedVector2Array(277, 200, 288, 243, 253, 248, 248, 224)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/12"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(277, 200, 288, 243, 253, 248, 248, 224)
+
+[node name="13" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/13"]
+visible = false
+polygon = PackedVector2Array(288, 243, 296, 267, 302, 296, 302, 297, 261, 289, 253, 248)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/13"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(288, 243, 296, 267, 302, 297, 261, 289, 253, 248)
+
+[node name="14" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/14"]
+visible = false
+polygon = PackedVector2Array(302, 297, 308, 330, 310, 356, 270, 347, 261, 289)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/14"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(302, 296, 308, 330, 310, 356, 270, 347, 261, 289, 301, 296)
+
+[node name="15" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/15"]
+visible = false
+polygon = PackedVector2Array(310, 356, 311, 419, 279, 422, 270, 347)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/15"]
+position = Vector2(0, -5.62665)
+scale = Vector2(1, 1.01333)
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(310, 356, 311, 419, 279, 422, 270, 347)
+
+[node name="16" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/16"]
+visible = false
+polygon = PackedVector2Array(311, 419, 311, 436, 284, 445, 279, 421)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/16"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(311, 419, 311, 436, 284, 445, 279, 422, 310, 419)
+
+[node name="17" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/17"]
+visible = false
+polygon = PackedVector2Array(311, 436, 311, 478, 286, 472, 284, 445)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/17"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(311, 436, 311, 478, 286, 472, 284, 445)
+
+[node name="18" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/18"]
+visible = false
+polygon = PackedVector2Array(311, 478, 311, 508, 286, 506, 286, 472)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/18"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(311, 478, 311, 508, 286, 506, 286, 472)
+
+[node name="19" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/19"]
+visible = false
+polygon = PackedVector2Array(311, 508, 312, 547, 286, 544, 286, 506)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/19"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(311, 508, 312, 547, 286, 544, 286, 506)
+
+[node name="20" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/20"]
+visible = false
+polygon = PackedVector2Array(312, 547, 312, 571, 286, 570, 286, 544)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/20"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(312, 547, 312, 571, 286, 570, 286, 544)
+
+[node name="21" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/21"]
+visible = false
+polygon = PackedVector2Array(312, 571, 312, 599, 285, 599, 286, 569)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/21"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(312, 571, 312, 599, 285, 599, 286, 570)
+
+[node name="22" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/22"]
+visible = false
+polygon = PackedVector2Array(312, 599, 312, 628, 284, 628, 285, 597)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/22"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(312, 599, 312, 628, 284, 628, 285, 597)
+
+[node name="23" type="Area2D" parent="water_arc"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_arc/23"]
+visible = false
+polygon = PackedVector2Array(312, 628, 312, 644, 312, 645, 284, 644, 284, 628)
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="water_arc/23"]
+texture = ExtResource("1_am60l")
+polygon = PackedVector2Array(312, 628, 312, 645, 284, 644, 284, 628)
+
+[node name="basin" type="Area2D" parent="."]
+position = Vector2(-15, 12)
+scale = Vector2(1.39139, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basin"]
+position = Vector2(7850.3, 104)
+shape = SubResource("RectangleShape2D_m2wf4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="area_entered" from="basin" to="." method="_on_basin_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

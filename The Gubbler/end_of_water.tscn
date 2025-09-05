@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdvads3xlfruq"]
+
+[ext_resource type="Texture2D" uid="uid://mfjag6fr702r" path="res://Water.png" id="1_0e2cv"]
+
+[node name="end_of_water" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(0.0078629, 0.00627138)
+texture = ExtResource("1_0e2cv")
+offset = Vector2(0, 1594.54)

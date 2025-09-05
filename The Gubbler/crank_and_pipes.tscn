@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv1ev2glqpwkf"]
+
+[ext_resource type="Script" path="res://crank and pipes.gd" id="1_7acrb"]
+[ext_resource type="Texture2D" uid="uid://dpw0qfep1j5ef" path="res://Crank Lever.png" id="2_bocvg"]
+[ext_resource type="Texture2D" uid="uid://b2k78sxcfukkb" path="res://Crank Circle.png" id="3_s40j8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujc8f"]
+radius = 124.487
+
+[node name="crank" type="Node2D"]
+position = Vector2(49, 24)
+script = ExtResource("1_7acrb")
+
+[node name="lever" type="Sprite2D" parent="."]
+position = Vector2(311, 337)
+scale = Vector2(1, 1.61342)
+texture = ExtResource("2_bocvg")
+
+[node name="area" type="Area2D" parent="."]
+position = Vector2(312, 332)
+scale = Vector2(1, 1.61342)
+
+[node name="circle hitbox" type="CollisionShape2D" parent="area"]
+position = Vector2(-1, 1.23961)
+scale = Vector2(1, 0.619801)
+shape = SubResource("CircleShape2D_ujc8f")
+
+[node name="circle" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(362, 369)
+scale = Vector2(1, 1)
+texture = ExtResource("3_s40j8")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]
+[connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="area" to="." method="_on_area_2d_mouse_exited"]
