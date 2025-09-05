@@ -1,5 +1,7 @@
 # The Gubbler in the Baubled Bubbler
 
+[Newgrounds](https://www.newgrounds.com/portal/view/966684), [Itch.io](https://jowain.itch.io/baubled-bubbler)
+
 The Gubbler was conceived in **two days** for the 2025 Global Game Jam.
 The theme was "bubbles", and in Wisconsin they call water fountains "bubblers". The game seemed obvious from there
 
