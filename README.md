@@ -7,7 +7,7 @@ The theme was "bubbles", and in Wisconsin they call water fountains "bubblers". 
 
 You control The Gubbler, a little goblin that lives in a water fountain dubbed the "baubled bubbler". He has a little crank that he uses to change the size of the pipe in the fountain, changing the pressure to alter the distance the water travels. Your aim is to get water in the mouths of people that come to the fountain
 
-# Some technical notes
+# Technical Notes
 
 Before I get to the programming complaints, I want to say that I am quite fond of how I animated The Gubbler. It was a pain, and it took many many attempts and redrawing, but I got a little guy who ~85% of the time looks like he's really turning a crank. He's the triumph of the project for sure.
 
